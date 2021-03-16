@@ -5,10 +5,17 @@ Show them when they receive the class 'on'
 Hide them when they receive the class 'off'
 Feel free to adjust the defaults to your needs.
 ********************************************** */
+body {
+	background: rgb(23,28,31);
+	background: radial-gradient(circle, rgba(23,28,31,1) 0%, rgba(31,41,43,1) 65%, rgba(79,93,94,1) 100%);
+	text-align: center;}
+
+
 #closed-captions p {
 	opacity: 0;
 	transition: .05s;
-	position: absolute;
+	position:absolute;
+	text-align: center;
 }
 #closed-captions .on {
 	opacity: 1;
@@ -17,9 +24,124 @@ Feel free to adjust the defaults to your needs.
 	transition: .2s;
 	opacity: 0;
 }
+#closed-captions {
+	display: flex;
+	justify-content: center;
+  }
+/*computervoice*/
 .voice1 {
-	font-style: italic;
+	font-family: "Brenner Mono Regular";
+	font-size: 15px;
+	text-align: center;
+	color: rgb(247, 242, 222);
 }
+/*officer*/
+.voice2 {
+	font-family: "Brenner Slab";
+	font-size: 20px;
+	text-align: center;
+	color: #97bcbe;
+}
+/*man who walks by*/
+.voice3 {
+	font-family: "Brenner Sans Condensed RemVwyt";
+	font-size: 20px;
+	text-align: center;
+	color: rgb(180, 95, 15);
+}
+/*fourth voice*/
+.voice4 {
+	font-family: "Brenner Sans Condensed LiIdGPL";
+	font-size: 20px;
+	text-align: center;
+	color: rgb(100, 185, 29);
+}
+/* Within cells interliked 3 times */
+#closed-captions p:nth-of-type(42) {
+    top: 60%;
+}
+#closed-captions p:nth-of-type(43) {
+    top: 61%;
+}
+#closed-captions p:nth-of-type(44) {
+    top: 62%;
+}
+/*grid*/
+#audiocaption {
+	display: grid;
+grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
+justify-items: center;
+grid-area: center;
+align-items: center;
+grid-template-columns: 33% 33% 33%;
+grid-template-rows: 100% 50% 50%;
+	color: rgb(226, 223, 28);
+	font-family: "Brenner Sans Bold";
+}
+#mysterious {
+	display: grid;
+	grid-column: 1 / -1;
+	grid-row: 3 / 3;
+	opacity: 0;
+}
+#alarm1 {
+	display: grid;
+	grid-column: 1 / -1;
+	grid-row: 3 / 3;
+	opacity: 0;
+}
+#siren1 {
+	display: grid;
+	grid-column: 1 / -1;
+	grid-row: 3 / 3;
+	opacity: 0;
+}
+#beep1 {
+	display: grid;
+	grid-column: 1 / -1;
+	grid-row: 3 / 3;
+	opacity: 0;
+}
+#peopletalking {
+	display: grid;
+	grid-column: 1 / -1;
+	grid-row: 3 / 3;
+	opacity: 0;
+}
+#insistentnoise1 {
+	display: grid;
+	grid-column: 1 / -1;
+	grid-row: 3 / 3;
+	opacity: 0;
+}
+#insistentnoise2 {
+	display: grid;
+	grid-column: 1 / -1;
+	grid-row: 3 / 3;
+	opacity: 0;
+}
+#insistentnoise3 {
+	display: grid;
+	grid-column: 1 / -1;
+	grid-row: 3 / 3;
+	opacity: 0;
+}
+#silence1 {
+	display: grid;
+	grid-column: 1 / -1;
+	grid-row: 3 / 3;
+	opacity: 0;
+}
+#secondscene {
+	display: grid;
+	grid-column: 1 / -1;
+	grid-row: 3 / 3;
+	opacity: 0;
+	outline-style: solid;
+	outline-color: #4f5d5e;
+	outline-offset: 5px;
+}
+
 
 /* **********************************************
 The first paragraph, with extended timing for 
@@ -30,69 +152,8 @@ The first paragraph, with extended timing for
 You probably want to change the styling.
 ********************************************** */
 .p0 span {
-	opacity: 0;
-	font-family: brenner;
-}
-.p0.on span:first-of-type {
 	opacity: 1;
-	transition: 0s;
-	font-weight: 200;
-}
-.p0.on span:nth-of-type(2) {
-	opacity: 1;
-	transition: 0s .4s;
-	margin-right: -.25em;
-	font-weight: 400;
-}
-.p0.on span:nth-of-type(3) {
-	opacity: 1;
-	transition: 0s .5s;
-	margin-right: -.25em;
-	font-weight: 600;
-}
-.p0.on span:nth-of-type(4) {
-	opacity: 1;
-	transition: 0s .7s;
-	margin-right: -.25em;
-	font-weight: 800;
-}
-.p0.on span:nth-of-type(5) {
-	opacity: 1;
-	transition: 0s 1.1s;
-	margin-right: -.25em;
-	font-family: "brenner sans";
-}
-.p0.on span:nth-of-type(6) {
-	opacity: 1;
-	transition: 0s 1.4s;
-	margin-right: -.25em;
-	font-family: "brenner display";
-}
-.p0.on span:nth-of-type(7) {
-	opacity: 1;
-	transition: 0s 1.7s;
-	margin-right: -.25em;
-	font-family: "brenner script";
-}
-.p0.on span:nth-of-type(8) {
-	opacity: 1;
-	transition: 0s 2s;
-	font-family: "brenner script";
-}
-.p0.on span:nth-of-type(9) {
-	opacity: 1;
-	transition: 0s 3s;
-	font-family: "brenner Sans condensed";
-}
-.p0.on span:nth-of-type(10) {
-	opacity: 1;
-	transition: 0s 3.2s;
-	font-family: "brenner mono";
-}
-.p0.on span:nth-of-type(11) {
-	opacity: 1;
-	transition: 0s 3.7s;
-	font-family: "brenner slab";
+	font-family: "Brenner Mono Regular";
 }
 
 /* **********************************************
@@ -102,15 +163,139 @@ Sounds.
 	a sound starts.
 *********************************************  */
 
-/* The moment the class .sound1 is added to the body, the background is yellow */
-.sound1 {
-	background: yellow;
-}
+/* The moment the class .sound1 is added to the body, the background is blue */
 
-iframe {
-	transition: 1s;
+.sound0 #mysterious {
+	opacity: 1;
 }
-/* The moment the class .sound1 is added to the body, the movie makes a turn */
+.sound1 #mysterious {
+	opacity: 0;
+}
+.sound1 #alarm1 {
+	opacity: 1;
+}
 .sound1 iframe {
-	transform: rotate(1turn);
+	box-shadow: 0 0 15px 15px rgb(200, 10, 1);
+	transition-duration: 1s;
+}
+.sound2 iframe {
+		box-shadow: none;
+}
+.sound2 #alarm1 
+	{opacity: 0;
+}
+.sound3 #siren1
+	{opacity: 1;
+}
+/* .sound3 iframe {
+	border: 1px solid;
+	box-shadow: 5px 5px 8px #e27108, 10px 10px 8px #fca555, 15px 15px 8px #ffc38b;
+	transition-duration: 3s;
+} */
+.sound3 iframe{
+	box-shadow: 40px 0 30px -4px #e27108, -40px 0 30px -4px #e27108;
+	-moz-box-shadow: 40px 0 30px -4px #e27108, -40px 0 30px -4px #e27108;
+	-webkit-box-shadow: 40px 0 30px -4px #e27108, -40px 0 30px -4px #e27108;
+	-o-box-shadow: 40px 0 30px -4px #e27108, -40px 0 30px -4px #e27108;
+	transition-duration: 3s;
+  }
+.sound4 iframe {
+		box-shadow: none;
+}
+.sound4 #siren1 {
+	opacity: 0;
+}
+.sound5 #beep1 {
+	opacity: 1;
+}
+.sound5 iframe {
+	box-shadow:0 0 30px 30px rgb(209, 209, 209);
+	transition-duration: 1s;
+}
+.sound6 iframe {
+	box-shadow: none;
+}
+.sound6 #beep1 {
+	opacity: 0;
+}
+.sound7 #peopletalking {
+	opacity: 1;
+}
+.sound8 #peopletalking {
+	opacity: 0;
+}
+.sound8 #beep1 {
+	opacity: 1;
+}
+.sound8 iframe {
+	box-shadow:0 0 30px 30px rgb(209, 209, 209);
+	transition-duration: 1s;
+}
+.sound9 iframe {
+	box-shadow: none;
+}
+.sound9 #beep1 {
+	opacity: 0;
+}
+.sound9 #peopletalking {
+	opacity: 1;
+}
+.sound10 #peopletalking {
+	opacity: 0;
+}
+.sound10 #beep1 {
+	opacity: 1;
+}
+.sound10 iframe {
+	box-shadow:0 0 30px 30px rgb(209, 209, 209);
+	transition-duration: 1s;
+}
+.sound11 iframe {
+	box-shadow: none;
+}
+.sound11 #beep1 {
+	opacity: 0;
+}
+/* .sound11 iframe {
+		/* transform: skewX(25deg); }*/
+
+.sound11 iframe{
+	box-shadow: 40px 0 30px -4px #a5b19a, -40px 0 30px -4px #a5b19a;
+	-moz-box-shadow: 40px 0 30px -4px #a5b19a, -40px 0 30px -4px #a5b19a;
+	-webkit-box-shadow: 40px 0 30px -4px #a5b19a, -40px 0 30px -4px #a5b19a;
+	-o-box-shadow: 40px 0 30px -4px #a5b19a, -40px 0 30px -4px #a5b19a;
+	transition-duration: 10s;
+		  }
+.sound11 #insistentnoise1 {
+	opacity: 1;
+}
+.sound12 #insistentnoise1 {
+	opacity: 0;
+}
+.sound12 iframe {
+	box-shadow: none;
+}
+.sound12 #insistentnoise2  {
+	opacity: 1;
+}
+.sound13 #insistentnoise2 {
+	opacity: 0;
+}
+.sound13 #insistentnoise3 {
+	opacity: 1;
+}
+.sound14 #insistentnoise3 {
+	opacity: 0;
+}
+.sound14 #silence1 {
+	opacity: 1;
+}
+.sound15 #silence1 {
+	opacity: 0;
+}
+.sound15 #secondscene {
+	opacity: 1;
+}
+.sound16 #secondscene {
+	opacity: 0;
 }
